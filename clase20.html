@@ -10,7 +10,98 @@
         <input type="text" name = "q">
         <button type="submit"> Buscar </button>
 
+    </form>
+    <br>
+    <br>
 
+    <h1>Datos</h1>
+    <form action="#">
+        <label for="nom">Nombre:</label>
+        <input type="text" name="nombre" id="nom">
+        <label>Nombre:</label>
+        <input type="text" name = "nombre" placeholder="Ingrese su nombre">
+        <button type="submit"> aceptar </button>
+        <br>
+        <label>Apellido</label>
+        <input type="text" name="apellido" value="Gomez" disabled>
+        
+        <div>
+        <label>Email</label>
+        <input type="email" placeholder="example@com.com" required>
+        </div>
+        <div>
+            <label>Edad</label>
+            <input type="number" name="Edad" placeholder="18" min="1" max="120">
+        </div>
+        <fieldset>
+            <legend>Datos de la U</legend>
+            <label>Fecha de matricula</label>
+            <input type="date" name ="FechaMatricula" required>
+            <input type="datetime" name ="FechaMatriculaDos" required>
+            <input type="datetime-local" name ="FechaMatriculaTres" required>
+        </fieldset>
+        <div>
+            <label>Foto</label>
+            <input type="file" name="Foto">
+        </div>
+        <div>
+            <label>Color favorito</label>
+            <input type="color" name="colorfav">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="contraseña" >
+        </div>
+        <label>Clasificacion</label>
+        <label>
+            <input type="radio" name ="Clasificacion" value="A">
+            opcion 1
+        </label>
+        <label>
+            <input type="radio" name ="Clasificacion" value="B" checked>
+            opcion 2
+        </label>
+        <label>
+            <input type="radio" name ="Clasificacion" value="C">
+            opcion 3
+        </label>
+        
+        <div>
+            <fieldset>
+                <legend>Jobs</legend>
+                <label>
+                    <input type="checkbox" name="opt1">
+                    opcion 1
+                </label>
+                <label>
+                    <input type="checkbox" name="opt2">
+                    opcion 2
+                </label>
+                <label>
+                    <input type="checkbox" name="opt3">
+                    opcion 3
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <label>Ciudad</label>
+            <select name="ciudad">
+                <option value="3">Sogamoso</option>
+                <option value="1">Tunja</option>
+                <option value="2">Duitama</option>
+            </select>
+        </div>
+        <div>
+            <label>Observaciones</label>
+            <textarea name="obs" cols = "25" rows ="10">
+                pepito
+            </textarea>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+            <input type="submit" value="Enviar">
+            <button type ="reset">reset</button>
+        </div>
     </form>
 </body>
 
