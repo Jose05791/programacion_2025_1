@@ -28,3 +28,130 @@
     margin: auto;
     padding: 50px;  /*Separacion de 50 pixeles*/
 }
+
+h2{
+    font-size: 60;
+    font-family: Arial, Helvetica, sans-serif; /*Es para formar respaldos de las fuentes*/
+    font-weight: normal;
+    font-style: oblique; /*un estilo de fuente inclinada*/
+    text-align: center; /*aliniacion del texto*/
+    text-decoration: line-through;  /*linea sobre el texto*/
+    text-decoration-style: dotted;    /*tipos de linea*/
+    text-decoration-color: #000000; 
+    text-transform: uppercase;      /*para poner mayusculas o minusculas (en este caso mayuscula)*/
+   text-shadow: 1px 10px 20px rgba(0, 81, 255, 0.5);            /*difuminado de las sombras (positivo arriba negativo abajo)*/
+    /*rgba es solo otra forma de poner colores significa (Red Green Blue Trasnparente y va de 0 a 250)*/
+    
+    text-indent: 16px;
+    word-spacing: 20px;         /*Es el espacio entre las palabras*/
+    letter-spacing: 50px;       /*Es el espacio entre las letras*/
+
+}
+
+p/*causa*/{ 
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(150, 10, 200, 0.3);
+    background-image: url(../Recursos/platisho\ volador.webp), url('../Recursos/AAAAAAAAAAAAAAAAAAA.jpg');
+    background-size: 20%, cover;
+    background-repeat: no-repeat;
+    background-position-x: 20px;    /*Desplazamiento en x*/
+    background-position-y: 50px;    /*Desplazamiento en y*/
+    background-position: 0px 0px;
+}
+
+section{
+    width: 60vw;
+    height: 60vh;
+    border: 1px solid #000000;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;    /*cambia posiciones*/
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado{
+    width: 50px;
+    height: 50px;
+}
+
+.c1{
+    background-color: #ff0000;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+.c2{
+    background-color: #00ff00;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.c3{
+    background-color: #0000ff;
+    position:  fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+h2{   /*no se hace profesionalmente*/
+    position: sticky;
+    top: 10px;
+
+}
+
+.circulo:first-child{
+    width: 50px;
+    height: 50px;
+    background-color: #0000ff;
+    border-radius: 50%;
+}
+
+main{
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 200px 300px 300px 150px;
+    grid-template-areas: 
+    "footer footer dv1"
+    "nav . dv1"
+    "nav header header"
+    ". header header";
+}
+
+header{
+    grid-area: header;
+    background-color: #ff0000;
+    width: 100%;
+    height: 200px;
+
+}
+
+nav{
+    grid-area: nav;
+    background: #0000ff;
+    width: 100%;
+    height: 200px;
+}
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    height: 150px;
+    background: #000000;
+}
+
+main div{
+    grid-area: dv1;
+    width: 100%;
+    height: 100px;
+    background: #e5ff00; 
+    border: 1px solid red;
+}
+
