@@ -155,3 +155,77 @@ main div{
     border: 1px solid red;
 }
 
+.boton{
+    border: 0px;
+    background-color: #0000ff;
+    color: aliceblue;
+    width: 150px;
+    height: 80px;
+    border-radius: 16px;
+    box-shadow: 1px 10px 5px 3px #0000ff;   /*desplazamiento horizontal desplazamiento vertical que tan grande o difuminada estara la zona color*/
+    transition-property: background-color, box-shadow, width;       /*con el width en este caso le dan valores y es lo que permite la animacion*/
+    transition-duration: 2s, 500ms, 1s;    /*Duración 2 seg (las comas indican que la primera es para la primera propiedad los 2s y la otra es para la segunda)*/
+    transition-delay: 1s, 0s, 500ms;   /*la transicion va adurar en total 4 seg, 2 en lo que se activa y otros 2 para acabarse*/
+    transition-timing-function: linear;
+}
+
+.btn-y{     /*btn-y solo es el nombre de la clase*/
+    background-color: #00ff00;
+}
+
+.boton:hover{
+    background-color: #ff0000;
+    box-shadow: 10px 1px 5px 3px #00ff00; 
+    width: 300px;
+}
+
+.divAnimado{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border: 1px solid black;
+    background-color: #00ff00;
+    width: 200px;
+    height: 200px;
+    animation-name: ejemploAnimacion;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;      /*define el estado en el que queda la animacion, solo funciona con animaciones finitas*/
+
+}
+
+@keyframes ejemploAnimacion{            /*se agregan frames*/
+ /*   from{
+        border-radius: 0px;
+    }
+    to{
+        border-radius: 50%;
+    }   */
+
+    0%{
+        border-radius: 150px;
+        top: 0px;
+    }
+    25%{
+        background-color: #0000ff;
+    }
+    50%{
+        background-color: #ff0000;
+        border-width: 10px;
+    }
+    75%{
+        background-color: #e5ff00;
+
+    }
+    100%{
+        background-color: #ff00dd;
+        top: calc(100vh)
+    }
+
+
+
+}
