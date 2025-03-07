@@ -1,7 +1,7 @@
-<? 
-echo "Hola mundo!!!";
-$nombre='pepe';
-echo "hola ".$nombre;
+<?php
+echo "Hola mundo!!! <br>";
+$nombre='pepe <br>';
+echo "hola ".$nombre ;
 echo "hola $nombre <br>";
 
 $edad = 30;
@@ -24,6 +24,123 @@ $persona = [        //array con indices
     "edad" => 35,
 ];
 
+$jobs = null;
+define("CIEN", 100);    //constantes
+
 echo $persona['apellido'];
+echo CIEN, '<br>';
+
+/*
+&&      and
+||      or
+!       negacion
+==      igual que
+!=      diferente
+<       mayor que
+>       menor que
+>=      mayor o igual
+<=      menor o igual
+*/
+$edad = 24;
+
+if($edad > 0 && $edad <= 12){
+
+}else if ($edad > 12 && $edad <= 17){
+
+}else if ($edad > 18 && $edad <= 28){
+
+}else{
+
+}
+
+$categoria = 'a';
+switch($categoria){
+    case 'a';
+        /////
+        break;
+    case 'b';
+        /////
+        break;
+    default:
+        /////
+        break;
+}
+
+$esMayorEdad = $edad >= 18 && $edad<=150? 'si' : 'no';
+
+$pares = [];
+$impares = [];
+
+for($i=0; $i<=9; $i++){
+    $numero = $numeros[$i];
+    if(($numero % 2)==1) {
+        array_push($impares, $numero);
+    }else{
+        array_push($pares, $numero);
+    }
+    
+}
+
+var_dump($impares);
+echo '<br>';
+var_dump($pares);
+
+$pares = [];
+$impares = [];
+$i = 0;
+while ($i < 10){
+    $numero = $numeros[$i];
+    if (($numero % 2) == 1){
+        array_push($impares, $numero);
+    } else {
+        array_push($pares, $numero);
+    }
+    $i++;
+}
+
+echo '<br>';
+var_dump($pares);
+
+$i = 0;
+
+do{
+    $numero=$numeros[$i];
+    if(($numero % 2)==1){
+        array_push($impares,$numero);
+    }else {
+        array_push($pares,$numero);
+    }
+    $i++;
+} while($i<10);
+
+var_dump($impares);
+echo '<br>';
+var_dump($pares);
+
+foreach($numeros as $numero){
+    if(($numero % 2)==1){
+        array_push($impares,$numero);
+    }else {
+        array_push($pares,$numero);
+    }
+
+}
+var_dump($impares);
+echo '<br>';
+var_dump($pares);
+
+////////////////////////////////////////////////////
+
+var_dump($impares);
+echo '<br>';
+var_dump($pares);
+
+foreach($numeros as $index => $numero){
+    if(($numero % 2) == 1){
+        array_push($impares,$numero);
+    }else {
+        array_push($pares,$numero);
+    }
+}
 
 ?>
