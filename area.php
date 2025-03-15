@@ -1,6 +1,6 @@
 <?php
-include 'oop.php';
-//require 'oop.php';
+include 'oop.php';      //el include y require funcionan iguales pero el include muestra una advertencia cuando no encuentra el archivo pero aun así ejecuta el codigo
+//require 'oop.php';    //Y el require muestra una advertencia tambien pero detiene la ejecucion
 
 
 $arista = $_POST['arista'];     //se captura el valor
